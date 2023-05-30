@@ -17,9 +17,13 @@ public class Dev {
         if(conteudo.isPresent()) {
             this.conteudosConcluidos.add(conteudo.get());
             this.conteudosInscritos.remove(conteudo.get());
+            if(this.conteudosInscritos.isEmpty()){
+                System.out.println("Parabéns " +this.nome +", você concluíu o Bootcamp!");
+            }
         } else {
             System.err.println("Você não está matriculado em nenhum conteúdo!");
         }
+
     }
 
     public double calcularTotalXp() {
